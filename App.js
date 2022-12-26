@@ -1,13 +1,13 @@
 import { StatusBar } from "expo-status-bar";
 import { View } from "react-native";
 
-import Props from "./src/screen/props";
+import State from "./src/screen/state";
 
 export default function App() {
   return (
     <View style={{ marginTop: "auto", marginBottom: "auto" }}>
       <StatusBar />
-      <Props />
+      <State />
     </View>
   );
 }
