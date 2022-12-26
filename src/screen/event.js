@@ -1,6 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { View, Text, TouchableOpacity } from "react-native";
+import { View, Text, Pressable } from "react-native";
 
 export default function Event() {
   const [data, setData] = React.useState(1);
@@ -11,13 +11,13 @@ export default function Event() {
 
       <Text>{data}</Text>
 
-      <TouchableOpacity onPress={() => setData(data++)}>
+      <Pressable onPress={() => alert("Halo")}>
         <Text>Inc</Text>
-      </TouchableOpacity>
+      </Pressable>
 
-      <TouchableOpacity onPress={() => setData(data--)}>
+      <Pressable onPress={() => setData(data--)}>
         <Text>Decc</Text>
-      </TouchableOpacity>
+      </Pressable>
     </View>
   );
 }
