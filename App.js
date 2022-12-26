@@ -1,13 +1,13 @@
 import { StatusBar } from "expo-status-bar";
-import { StyleSheet, Text, View } from "react-native";
+import { View } from "react-native";
 
-import EmbedExpression from "./src/screen/embedExpression";
+import Event from "./src/screen/event";
 
 export default function App() {
   return (
     <View style={{ marginTop: "auto", marginBottom: "auto" }}>
       <StatusBar />
-      <EmbedExpression />
+      <Event />
     </View>
   );
 }
