@@ -10,7 +10,7 @@ import { Ionicons } from "@expo/vector-icons"
 
 import { useTheme } from "native-base";
 
-import { Form, Hello, Incdec } from "./src/screen";
+import { Form, Hello, Incdec, ListSoc, DetailSoc } from "./src/screen";
 
 const Stack = createStackNavigator();
 
@@ -34,6 +34,8 @@ function MyTab() {
                         iconName = focused ? "ios-home" : "ios-home-outline";
                     } else if (route.name === "Form") {
                         iconName = focused ? "ios-information-circle" : "ios-information-circle-outline"
+                    } else if (route.name === "Social Media") {
+                        iconName = focused ? "ios-list-circle" : "ios-list-circle-outline"
                     }
 
                     return <Ionicons name={iconName} size={size} color={color} />
@@ -44,6 +46,7 @@ function MyTab() {
         >
             <Tab.Screen name="Home" component={Hello} />
             <Tab.Screen name="Form" component={Form} />
+            <Tab.Screen name="Social Media" component={ListSoc} />
         </Tab.Navigator>
     )
 
@@ -74,6 +77,16 @@ export default function Container() {
                     component={Incdec}
                     options={{
                         title: "Increment Decrement",
+                        headerMode: "screen",
+                        headerTintColor: "white",
+                        headerStyle: { backgroundColor: theme.colors.primary["300"] }
+                    }}
+                />
+                <Stack.Screen
+                    name="Detail Social"
+                    component={DetailSoc}
+                    options={{
+                        title: "Detail Social",
                         headerMode: "screen",
                         headerTintColor: "white",
                         headerStyle: { backgroundColor: theme.colors.primary["300"] }
