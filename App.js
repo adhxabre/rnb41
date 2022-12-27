@@ -1,13 +1,13 @@
 import { StatusBar } from "expo-status-bar";
 import { View } from "react-native";
 
-import State from "./src/screen/form";
+import Map from "./src/screen/map";
 
 export default function App() {
   return (
     <View>
       <StatusBar />
-      <State />
+      <Map />
     </View>
   );
 }
