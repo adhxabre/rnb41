@@ -1,8 +1,8 @@
 import React from "react";
 // import { Text, Box } from "native-base";
 
-import { Form, Hello } from "./src/screen";
+import { Form, Hello, Incdec } from "./src/screen";
 
 export default function Container() {
-    return <Form />;
+    return <Hello />;
 };
