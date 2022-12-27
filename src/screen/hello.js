@@ -2,14 +2,14 @@ import { StatusBar } from "expo-status-bar";
 import { Box, Center, Text } from "native-base";
 import { TouchableOpacity } from "react-native";
 
-export default function Hello() {
+export default function Hello({ navigation }) {
     return (
         <Box bg="primary.400" flex={1} alignItems="center" justifyContent="center">
             <StatusBar />
             <Text fontFamily="body" fontWeight={500} fontSize={50}>Hello world!</Text>
 
             <TouchableOpacity
-                onPress="#"
+                onPress={() => navigation.navigate("Incdec")}
                 style={{
                     backgroundColor: "#487eb0",
                     height: 40,
