@@ -1,13 +1,13 @@
 import { StatusBar } from "expo-status-bar";
 import { View } from "react-native";
 
-import Map from "./src/screen/map";
+import FlatList from "./src/screen/flatlist";
 
 export default function App() {
   return (
     <View>
       <StatusBar />
-      <Map />
+      <FlatList />
     </View>
   );
 }
